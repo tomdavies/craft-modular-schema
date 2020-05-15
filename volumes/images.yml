@@ -1,0 +1,10 @@
+schema:
+  version: 1.0
+  fragmentHandle: volumes/images
+  def:
+    type: volume
+    config:
+      name: Images
+      type: local
+      baseUrl: ${SITE_URL}/uploads/images
+      fileSystemPath: $IMAGES_FS_PATH

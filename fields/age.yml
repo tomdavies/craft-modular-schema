@@ -1,0 +1,21 @@
+schema:
+  version: 1.0.0
+  fragmentHandle: fields/age
+  def: 
+    type: field
+    config:
+      name: Year of birth
+      group: default
+      type: number
+      min: 2000
+      max: 2025
+  # This next key is probably poorly named - basically I'm thinking of this as some basic test data 
+  # when/if consuming this schema outside of Craft (e.g. as the model for a component in a styleguide)
+  # Obviously it would be neat to use something like faker here one day
+  seeds:
+    -
+      value: 2001
+    -
+      value: 2010
+    -   
+      value: 2010

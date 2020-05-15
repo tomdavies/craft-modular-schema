@@ -1,0 +1,14 @@
+schema:
+    # Defines this as the root schema file
+  root: true
+  # All imported partials must match schema type version, probably should have a better name
+  version: 1.0.0
+  # here we register 
+  require:
+    # Paths would be the simplest thing here, but the option to a pkg namespace would be really neat, 
+    # e.g. ostark/fancy-schemas/sections/pets
+    # 
+    # For local paths ersonally I don't think we should be normative about the directory structure here - let users 
+    # load schema partials from wherever makes sense
+    - ./sections/pets.yml
+

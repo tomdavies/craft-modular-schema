@@ -1,0 +1,40 @@
+schema:
+  version: 1.0.0
+  fragmentHandle: sections/pets
+  require:
+    - ../fields/age.yml
+    - ../fields/catBreed.yml
+    - ../fields/dogBreed.yml
+    - ../fields/heroImage.yml
+  def:
+    type: volume
+    config:
+      type: channel
+      name: Images
+      entryTypes:
+        - dog:
+            title: Dog
+            content:
+              tabName:
+                # @ prefix for an explicit reference to another schema partial, 
+                # prob should not be permitted in root schema
+                - @fields/age
+                - @fields/dogBreed
+                - @fields/heroImage
+                # Should inline fields be definable here, I tend to think not?
+        - cat:
+            title: Cat
+            content:
+              otherTabName:
+                - @fields/age
+                - @fields/catBreed
+                - @fields/heroImage
+  seeds:
+    -
+      entryType: Cat
+      title: Mr Puskins
+      content:
+        catBreed: Persian
+        age: 2019
+        heroImage: 
+          url: http://placekitten.com/g/600/800

@@ -1,0 +1,17 @@
+schema:
+  version: 1.0
+  fragmentHandle: fields/heroImage
+  require:
+    - ./volumes/images.yml
+  def:
+    type: field
+    config:
+      name: Hero Image
+      useSingleFolder: ''
+      defaultUploadLocationSource: @volumes/images
+      defaultUploadLocationSubpath: ''
+      restrictFiles: true
+      allowedKinds:
+        - image
+      sources:
+        - @volumes/images
