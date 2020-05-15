@@ -1,5 +1,5 @@
 schema:
-  version: 1.0.0
+  schemaDefVersion: 1.0.0
   fragmentHandle: fields/age
   def: 
     type: field
